@@ -1,6 +1,6 @@
 const rawPhone = process.env.NEXT_PUBLIC_PHONE ?? "919930693061";
 
-export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://foodconsultpro.com";
+export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.foodconsultpro.com";
 
 export const siteBusiness = {
   name: "FoodConsultPro",
