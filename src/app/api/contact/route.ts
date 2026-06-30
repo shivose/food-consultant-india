@@ -10,6 +10,11 @@ type ContactPayload = {
   message?: string;
 };
 
+type ResendError = {
+  message?: string;
+  name?: string;
+};
+
 function escapeHtml(value: string) {
   return value
     .replace(/&/g, "&amp;")
@@ -17,6 +22,34 @@ function escapeHtml(value: string) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
+}
+
+function getFromAddress() {
+  const fromEmail = process.env.CONTACT_FROM_EMAIL?.trim() || "onboarding@resend.dev";
+  const fromName = process.env.CONTACT_FROM_NAME?.trim() || "FoodConsultPro";
+  return `${fromName} <${fromEmail}>`;
+}
+
+function getResendUserMessage(error: ResendError) {
+  const message = error.message?.toLowerCase() ?? "";
+
+  if (message.includes("api key") || message.includes("invalid key")) {
+    return "Email service is misconfigured. Please contact us by phone or WhatsApp.";
+  }
+
+  if (
+    message.includes("only send") ||
+    message.includes("testing emails") ||
+    message.includes("your own email")
+  ) {
+    return "Email is in test mode. Please call or WhatsApp us directly, and we will get back to you.";
+  }
+
+  if (message.includes("verify") || message.includes("domain") || message.includes("not verified")) {
+    return "Email sender is not verified yet. Please call or WhatsApp us directly.";
+  }
+
+  return "Unable to send your request right now. Please try again or contact us by phone.";
 }
 
 export async function POST(request: Request) {
@@ -33,9 +66,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Please fill in all required fields." }, { status: 400 });
     }
 
-    const resendApiKey = process.env.RESEND_API_KEY;
-    const contactEmail = process.env.CONTACT_EMAIL;
-    const fromEmail = process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev";
+    const resendApiKey = process.env.RESEND_API_KEY?.trim();
+    const contactEmail = process.env.CONTACT_EMAIL?.trim();
 
     if (!resendApiKey || !contactEmail) {
       return NextResponse.json(
@@ -44,10 +76,18 @@ export async function POST(request: Request) {
       );
     }
 
+    if (!resendApiKey.startsWith("re_")) {
+      console.error("Invalid RESEND_API_KEY format");
+      return NextResponse.json(
+        { error: "Email service is not configured correctly. Please contact us by phone or WhatsApp." },
+        { status: 500 },
+      );
+    }
+
     const resend = new Resend(resendApiKey);
 
     const { error } = await resend.emails.send({
-      from: fromEmail,
+      from: getFromAddress(),
       to: contactEmail,
       replyTo: email,
       subject: `New Consultation Request: ${restaurant}`,
@@ -64,11 +104,8 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      console.error("Resend error:", error);
-      return NextResponse.json(
-        { error: "Unable to send your request right now. Please try again." },
-        { status: 500 },
-      );
+      console.error("Resend error:", JSON.stringify(error));
+      return NextResponse.json({ error: getResendUserMessage(error) }, { status: 500 });
     }
 
     return NextResponse.json({ success: true });
