@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import GoogleTagManager from "@/components/GoogleTagManager";
+import { getGtmId } from "@/lib/gtm";
 import { siteUrl } from "@/lib/site";
 import "./globals.css";
+
+const gtmId = getGtmId();
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -40,7 +44,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={plusJakarta.variable}>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
+        {children}
+      </body>
     </html>
   );
 }

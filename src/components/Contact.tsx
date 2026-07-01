@@ -6,6 +6,7 @@ import { useState, type FormEvent } from "react";
 
 import { MapPin } from "lucide-react";
 
+import { GTM_EVENTS, pushDataLayerEvent } from "@/lib/gtm";
 import { getGoogleMapsLink, siteContact } from "@/lib/site";
 
 import FadeIn from "./FadeIn";
@@ -83,6 +84,7 @@ export default function Contact() {
 
 
       setSubmitted(true);
+      pushDataLayerEvent(GTM_EVENTS.LEAD_FORM_SUBMIT, { form_location: "contact" });
 
     } catch {
 

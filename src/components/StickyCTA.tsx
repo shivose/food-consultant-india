@@ -1,6 +1,7 @@
 "use client";
 
 import { Phone } from "lucide-react";
+import { GTM_EVENTS, pushDataLayerEvent } from "@/lib/gtm";
 import { getTelLink, getWhatsAppLink } from "@/lib/site";
 
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -26,6 +27,9 @@ export default function StickyCTA() {
       <a
         href={getTelLink()}
         aria-label="Call us"
+        onClick={() =>
+          pushDataLayerEvent(GTM_EVENTS.PHONE_CLICK, { link_location: "sticky_cta" })
+        }
         className={`fixed bottom-6 left-4 z-40 sm:left-6 ${stickyButtonClass} bg-primary shadow-primary/25 hover:bg-slate-800`}
       >
         <Phone className="h-6 w-6" />
@@ -35,6 +39,9 @@ export default function StickyCTA() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
+        onClick={() =>
+          pushDataLayerEvent(GTM_EVENTS.WHATSAPP_CLICK, { link_location: "sticky_cta" })
+        }
         className={`fixed bottom-6 right-4 z-40 sm:right-6 ${stickyButtonClass} bg-[#25D366] shadow-[#25D366]/30 hover:bg-[#20bd5a]`}
       >
         <WhatsAppIcon className="h-7 w-7" />
