@@ -15,21 +15,21 @@ export default function CTA() {
 
             <div className="relative">
               <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-[2.75rem] lg:leading-tight">
-                Don&apos;t Wait for an Inspection to Find Out What&apos;s Wrong.
+                Better Systems. Better Teams. Better Restaurants.
               </h2>
               <div className="mx-auto mt-6 max-w-2xl space-y-4 text-base leading-relaxed text-slate-300 md:text-lg">
                 <p>
-                  The best restaurants don&apos;t prepare only when an inspection is due.
+                  Whether you&apos;re opening a new restaurant, improving an existing operation,
+                  or looking for a long-term operations partner, we&apos;re here to help.
                 </p>
-                <p>They build systems that keep them ready every day.</p>
                 <p>
-                  Whether you are opening a new restaurant, improving an existing operation, or
-                  preparing for an upcoming inspection, we can help.
+                  Let&apos;s build a restaurant that is safe, consistent, efficient, and ready for
+                  every inspection.
                 </p>
               </div>
               <div className="mt-10">
                 <Button href="#contact" variant="primary" size="lg" className="!bg-accent">
-                  Book Your Consultation
+                  Schedule Your Consultation
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </div>

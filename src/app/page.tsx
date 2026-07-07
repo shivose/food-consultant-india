@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import Problems from "@/components/Problems";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Process from "@/components/Process";
+import WhyUs from "@/components/WhyUs";
+import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
@@ -27,6 +29,10 @@ export default function Home() {
         <WhyChooseUs />
         <SectionDivider />
         <Process />
+        <SectionDivider />
+        <WhyUs />
+        <SectionDivider />
+        <CTA />
         <SectionDivider />
         <Contact />
       </main>

@@ -5,12 +5,13 @@ import SectionHeader from "./SectionHeader";
 import SectionCTA from "./SectionCTA";
 
 const problems = [
-  "Staff don't follow hygiene standards consistently",
-  "SOPs exist but are rarely followed",
-  "Food safety records are incomplete or missing",
-  "Kitchen practices change from one shift to another",
-  "Managers spend more time fixing problems than preventing them",
-  "You're unsure whether your restaurant is fully prepared for an FSSAI inspection",
+  "Staff don't follow SOPs consistently",
+  "Kitchen hygiene depends on who's on duty",
+  "Managers spend more time solving problems than preventing them",
+  "Different shifts follow different standards",
+  "Food safety practices are inconsistent",
+  "Guest complaints keep repeating",
+  "Preparing for inspections becomes stressful",
 ];
 
 export default function Problems() {
@@ -18,9 +19,8 @@ export default function Problems() {
     <section id="challenges" className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="Are These Challenges Holding Your Restaurant Back?"
-          title="Most Restaurants Don't Have a People Problem. They Have a Systems Problem."
-          subtitle="If your restaurant is facing any of these challenges, you're not alone."
+          title="Is Your Restaurant Facing These Challenges?"
+          subtitle="Every restaurant has challenges. The difference is whether they are managed through systems or daily firefighting."
         />
 
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
@@ -57,9 +57,11 @@ export default function Problems() {
         </div>
 
         <FadeIn delay={0.4} className="mt-12 text-center">
-          <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-600 md:text-lg">
-            Without proper systems, maintaining food safety and operational consistency becomes
-            difficult.
+          <p className="text-xl font-bold text-primary md:text-2xl">
+            The problem isn&apos;t your people.
+          </p>
+          <p className="mx-auto mt-3 max-w-3xl text-base leading-relaxed text-slate-600 md:text-lg">
+            The problem is that they don&apos;t have the right systems to follow.
           </p>
         </FadeIn>
       </div>
