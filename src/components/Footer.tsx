@@ -76,6 +76,7 @@ export default function Footer() {
               Services
             </h3>
             <ul className="mt-4 space-y-2.5">
+              <li className="text-sm text-slate-600">Restaurant Operations Consultancy</li>
               <li className="text-sm text-slate-600">Food Safety Audits</li>
               <li className="text-sm text-slate-600">SOP Development</li>
               <li className="text-sm text-slate-600">Staff Training</li>

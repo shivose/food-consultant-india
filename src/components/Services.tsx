@@ -7,11 +7,18 @@ import {
   Users,
   Star,
   RefreshCw,
+  Settings,
 } from "lucide-react";
 import FadeIn from "./FadeIn";
 import SectionHeader from "./SectionHeader";
 
 const services = [
+  {
+    icon: Settings,
+    title: "Restaurant Operations Consultancy",
+    description:
+      "Expert guidance on kitchen workflows, service standards, and day-to-day restaurant management.",
+  },
   {
     icon: Shield,
     title: "Food Safety Compliance",

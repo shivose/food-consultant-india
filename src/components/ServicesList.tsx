@@ -3,6 +3,7 @@ import FadeIn from "./FadeIn";
 import SectionHeader from "./SectionHeader";
 
 const serviceItems = [
+  "Restaurant Operations Consultancy",
   "Food Safety Audits",
   "FSSAI Compliance Consulting",
   "SOP Development & Implementation",
