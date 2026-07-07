@@ -111,19 +111,11 @@ export default function Contact() {
           <FadeIn>
 
             <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
-
-              Schedule Your Consultation
-
+              Book Your Restaurant Assessment
             </h2>
-
             <p className="mt-5 text-base leading-relaxed text-slate-600 md:text-lg">
-
-              Let&apos;s understand your restaurant, discuss your challenges, and recommend
-
-              practical solutions that improve food safety, strengthen operations, and help you
-
-              maintain FSSAI compliance.
-
+              Tell us about your restaurant and we&apos;ll identify operational gaps, food safety
+              risks, and practical next steps to build systems your team can follow every day.
             </p>
 
             <div className="mt-8 rounded-2xl border border-slate-100 bg-card p-5 shadow-soft-lg">
@@ -195,7 +187,7 @@ export default function Contact() {
 
                   <p className="mt-2 text-slate-600">
 
-                    We&apos;ll be in touch within 24 hours to schedule your consultation.
+                    We&apos;ll be in touch within 24 hours to schedule your restaurant assessment.
 
                   </p>
 
@@ -420,7 +412,7 @@ export default function Contact() {
 
                   <div className="mt-6 flex justify-center">
                     <Button type="submit" size="lg" disabled={loading}>
-                      {loading ? "Sending..." : "Schedule Your Consultation"}
+                      {loading ? "Sending..." : "Book Your Restaurant Assessment"}
                     </Button>
                   </div>
 

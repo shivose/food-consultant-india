@@ -1,5 +1,4 @@
 import {
-  CalendarCheck,
   Check,
   ClipboardList,
   Settings,
@@ -22,7 +21,7 @@ const benefits = [
   },
   {
     icon: ClipboardList,
-    label: "SOP Development & Implementation",
+    label: "SOP Development",
   },
   {
     icon: Users,
@@ -31,10 +30,6 @@ const benefits = [
   {
     icon: Star,
     label: "Guest Experience Audits",
-  },
-  {
-    icon: CalendarCheck,
-    label: "Monthly Operations Reviews",
   },
 ];
 
@@ -54,42 +49,44 @@ export default function Hero() {
         <div className="mx-auto max-w-3xl text-center lg:max-w-5xl">
           <FadeIn delay={0.1}>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-4 py-1.5 text-sm font-medium text-accent">
-              <Settings className="h-4 w-4" />
-              Restaurant Operations Experts
+              <ShieldCheck className="h-4 w-4" />
+              FSSAI Inspection Readiness
             </div>
           </FadeIn>
 
           <FadeIn delay={0.2}>
             <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-primary sm:text-5xl lg:text-[3.25rem]">
-              Build Better Restaurant Systems with Expert Restaurant Operations Consulting
+              Would Your Restaurant Pass an FSSAI Inspection Today?
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.3}>
             <p className="mt-6 text-lg font-semibold leading-snug text-primary sm:text-xl">
-              Helping Restaurants Improve Food Safety, Standardize SOPs, Train Teams & Stay
-              Inspection-Ready.
+              Build Better Restaurant Systems with Expert Restaurant Operations Consulting
             </p>
           </FadeIn>
 
           <FadeIn delay={0.4}>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-slate-600 sm:text-lg">
-              <p>Running a restaurant shouldn&apos;t depend on constant supervision.</p>
               <p>
-                We help restaurant owners build practical systems that improve kitchen operations,
-                food safety, staff performance, and guest experience—creating a restaurant that
-                operates consistently every single day.
+                Most restaurant owners believe their operations are running well—until an
+                inspection or customer complaint reveals hidden gaps.
+              </p>
+              <p>
+                We help restaurants identify risks, improve food safety, implement practical SOPs,
+                train staff, and build systems that keep your restaurant running consistently every
+                day.
               </p>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.5}>
             <div className="mt-10 rounded-2xl border border-accent/20 bg-white/80 p-5 shadow-soft backdrop-blur-sm sm:p-6">
-              <ul className="mx-auto flex max-w-4xl flex-col items-center gap-3 md:hidden">
+              <ul className="mx-auto flex max-w-3xl flex-col items-center gap-3 sm:grid sm:grid-cols-2 lg:grid-cols-3">
                 {benefits.map((benefit) => (
                   <li
                     key={benefit.label}
-                    className="flex w-full max-w-md items-center gap-3 rounded-xl border border-accent/15 bg-accent/5 px-4 py-3.5 text-left transition-colors hover:border-accent/30 hover:bg-accent/10"
+                    className="flex w-full items-center gap-3 rounded-xl border border-accent/15 bg-accent/5 px-4 py-3.5 text-left transition-colors hover:border-accent/30 hover:bg-accent/10 lg:last:col-span-3 lg:last:mx-auto lg:last:max-w-sm"
                   >
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent text-white shadow-sm">
                       <benefit.icon className="h-4 w-4" />
@@ -101,28 +98,12 @@ export default function Hero() {
                   </li>
                 ))}
               </ul>
-              <ul className="mx-auto hidden max-w-4xl grid-cols-6 gap-3 md:grid">
-                {benefits.map((benefit) => (
-                  <li
-                    key={benefit.label}
-                    className="col-span-2 flex items-center gap-3 rounded-xl border border-accent/15 bg-accent/5 px-4 py-3.5 text-left transition-colors hover:border-accent/30 hover:bg-accent/10"
-                  >
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent text-white shadow-sm">
-                      <benefit.icon className="h-4 w-4" />
-                    </div>
-                    <span className="text-sm font-semibold leading-snug text-primary lg:text-base">
-                      {benefit.label}
-                    </span>
-                    <Check className="ml-auto h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
-                  </li>
-                ))}
-              </ul>
             </div>
           </FadeIn>
         </div>
       </div>
 
-      <SectionCTA />
+      <SectionCTA label="Schedule Your Restaurant Assessment" />
     </section>
   );
 }

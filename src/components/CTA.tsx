@@ -15,21 +15,15 @@ export default function CTA() {
 
             <div className="relative">
               <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-[2.75rem] lg:leading-tight">
-                Better Systems. Better Teams. Better Restaurants.
+                Ready to strengthen your restaurant operations?
               </h2>
-              <div className="mx-auto mt-6 max-w-2xl space-y-4 text-base leading-relaxed text-slate-300 md:text-lg">
-                <p>
-                  Whether you&apos;re opening a new restaurant, improving an existing operation,
-                  or looking for a long-term operations partner, we&apos;re here to help.
-                </p>
-                <p>
-                  Let&apos;s build a restaurant that is safe, consistent, efficient, and ready for
-                  every inspection.
-                </p>
-              </div>
+              <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-300 md:text-lg">
+                Book a consultation and discover how better systems can improve food safety, staff
+                performance, guest experience, and operational consistency.
+              </p>
               <div className="mt-10">
                 <Button href="#contact" variant="primary" size="lg" className="!bg-accent">
-                  Schedule Your Consultation
+                  Book Your Restaurant Assessment
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </div>

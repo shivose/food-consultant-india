@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "FoodConsultPro | Restaurant Operations & FSSAI Compliance Consulting",
   description:
-    "Expert restaurant operations consulting. Food safety audits, SOP implementation, staff training, and FSSAI compliance support to keep your restaurant inspection-ready every day.",
+    "Would your restaurant pass an FSSAI inspection today? FoodConsultPro helps restaurants identify risks, improve food safety, implement SOPs, train staff, and build systems for consistent operations.",
   keywords: [
     "restaurant consulting",
     "FSSAI compliance",

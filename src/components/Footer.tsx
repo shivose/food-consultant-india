@@ -4,7 +4,8 @@ import { getGoogleMapsLink, siteBusiness, siteContact } from "@/lib/site";
 
 const quickLinks = [
   { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
+  { label: "Challenges", href: "#challenges" },
+  { label: "Solutions", href: "#solutions" },
   { label: "Process", href: "#process" },
   { label: "Why Us", href: "#why-us" },
 ];
@@ -31,8 +32,8 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-600">
-              Expert restaurant operations consulting to help you stay FSSAI compliant and
-              operate with confidence every day.
+              We help restaurants build practical systems for food safety, SOPs, staff training,
+              and inspection-ready operations—every single day.
             </p>
             <a
               href={getGoogleMapsLink()}

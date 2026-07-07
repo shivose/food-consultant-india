@@ -7,27 +7,23 @@ import SectionCTA from "./SectionCTA";
 const steps = [
   {
     title: "Assess",
-    description: "Understand your current operations.",
+    description: "Understand your current operations and compliance status.",
   },
   {
     title: "Identify",
-    description: "Find operational and compliance gaps.",
+    description: "Find operational gaps, food safety risks, and blind spots.",
   },
   {
-    title: "Improve",
-    description: "Implement SOPs and practical systems.",
+    title: "Implement",
+    description: "Put practical SOPs and systems in place across your team.",
   },
   {
     title: "Train",
-    description: "Build confident and accountable teams.",
+    description: "Build confident staff who follow standards every shift.",
   },
   {
     title: "Review",
-    description: "Monthly audits to maintain standards.",
-  },
-  {
-    title: "Grow",
-    description: "Operate a safer, more consistent, and profitable restaurant.",
+    description: "Monthly compliance and quality reviews to maintain standards.",
   },
 ];
 
@@ -35,13 +31,16 @@ export default function Process() {
   return (
     <section id="process" className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeader title="Our Simple Improvement Process" />
+        <SectionHeader
+          title="Our Restaurant Improvement Process"
+          subtitle="Assess → Identify → Implement → Train → Review"
+        />
 
         {/* Desktop horizontal timeline */}
         <div className="hidden lg:block">
           <div className="relative">
             <div className="absolute left-0 right-0 top-8 h-0.5 bg-slate-200" />
-            <div className="grid grid-cols-6 gap-3">
+            <div className="grid grid-cols-5 gap-4">
               {steps.map((step, index) => (
                 <FadeIn key={step.title} delay={index * 0.08}>
                   <div className="relative flex flex-col items-center text-center">
@@ -80,7 +79,7 @@ export default function Process() {
         </div>
       </div>
 
-      <SectionCTA />
+      <SectionCTA label="Schedule Your Restaurant Assessment" />
     </section>
   );
 }

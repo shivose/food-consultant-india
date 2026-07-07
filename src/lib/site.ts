@@ -15,7 +15,7 @@ export const siteContact = {
   phone: rawPhone.replace(/\D/g, ""),
   phoneDisplay: process.env.NEXT_PUBLIC_PHONE_DISPLAY ?? "+91 9930693061",
   whatsappMessage:
-    "Hi, I'd like to schedule a restaurant compliance consultation with FoodConsultPro.",
+    "Hi, I'd like to book a restaurant assessment with FoodConsultPro.",
   address:
     process.env.NEXT_PUBLIC_OFFICE_ADDRESS ??
     "Lodha Signet 1, Unit No. 825, Premier Colony Ground, Thane, 421204",

@@ -7,23 +7,22 @@ const reasons = [
   "22+ Years of Combined Hospitality Experience",
   "Restaurant Operations Specialists",
   "ISO-Based Process Approach",
-  "Practical SOPs Your Team Can Follow",
-  "Hands-On Staff Training",
-  "Ongoing Operational Support",
+  "Practical SOPs & Staff Training",
+  "Monthly Compliance & Quality Reviews",
 ];
 
 export default function WhyUs() {
   return (
     <section id="why-us" className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeader title="Why Restaurant Owners Work With Us" />
+        <SectionHeader title="More Than a Consultant. Your Restaurant Operations Partner." />
 
         <FadeIn delay={0.1}>
           <ul className="mx-auto grid max-w-3xl gap-3 sm:grid-cols-2">
             {reasons.map((reason) => (
               <li
                 key={reason}
-                className="flex items-center gap-3 rounded-xl border border-slate-100 bg-card px-5 py-4 shadow-card"
+                className="flex items-center gap-3 rounded-xl border border-slate-100 bg-card px-5 py-4 shadow-card sm:last:col-span-2 sm:last:mx-auto sm:last:max-w-md"
               >
                 <Check className="h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
                 <span className="text-sm font-medium text-slate-700 sm:text-base">{reason}</span>
@@ -42,7 +41,7 @@ export default function WhyUs() {
         </FadeIn>
       </div>
 
-      <SectionCTA label="Book Your Consultation" />
+      <SectionCTA label="Book Your Restaurant Assessment" />
     </section>
   );
 }
