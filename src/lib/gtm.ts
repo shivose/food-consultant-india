@@ -1,5 +1,5 @@
 export const GTM_EVENTS = {
-  LEAD_FORM_SUBMIT: "lead_form_submit",
+  LEAD_FORM_SUBMIT: "CE - Lead Form Submit",
   PHONE_CLICK: "phone_click",
   WHATSAPP_CLICK: "whatsapp_click",
 } as const;
