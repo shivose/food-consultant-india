@@ -82,11 +82,18 @@ export default function Hero() {
 
           <FadeIn delay={0.5}>
             <div className="mt-10 rounded-2xl border border-accent/20 bg-white/80 p-5 shadow-soft backdrop-blur-sm sm:p-6">
-              <ul className="mx-auto flex max-w-3xl flex-col items-center gap-3 sm:grid sm:grid-cols-2 lg:grid-cols-3">
-                {benefits.map((benefit) => (
+              <ul className="mx-auto grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-6">
+                {benefits.map((benefit, index) => (
                   <li
                     key={benefit.label}
-                    className="flex w-full items-center gap-3 rounded-xl border border-accent/15 bg-accent/5 px-4 py-3.5 text-left transition-colors hover:border-accent/30 hover:bg-accent/10 lg:last:col-span-3 lg:last:mx-auto lg:last:max-w-sm"
+                    className={[
+                      "flex w-full items-center gap-3 rounded-xl border border-accent/15 bg-accent/5 px-4 py-3.5 text-left transition-colors hover:border-accent/30 hover:bg-accent/10 lg:col-span-2",
+                      index === 3 && "lg:col-start-2",
+                      index === 4 &&
+                        "sm:col-span-2 sm:mx-auto sm:max-w-[calc(50%-0.375rem)] lg:col-span-2 lg:mx-0 lg:max-w-none",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
                   >
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent text-white shadow-sm">
                       <benefit.icon className="h-4 w-4" />
