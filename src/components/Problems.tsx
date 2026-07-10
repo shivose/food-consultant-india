@@ -15,10 +15,10 @@ const challenges = [
 
 const consequences = [
   "Customer Complaints",
-  "Poor Reviews",
+  "Poor Online Reviews",
   "Food Safety Risks",
-  "Inspection Observations",
-  "Damage to Your Reputation",
+  "FSSAI Non-Compliance",
+  "Damage to Reputation",
   "Revenue Loss",
 ];
 
@@ -27,7 +27,13 @@ export default function Problems() {
     <section id="challenges" className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          title="Every Restaurant Has Blind Spots. Do You Know Yours?"
+          title={
+            <>
+              Every restaurant has operational blind spots.
+              <br />
+              Do you know yours?
+            </>
+          }
           subtitle="Common Challenges We Find"
         />
 

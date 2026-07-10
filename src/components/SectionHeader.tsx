@@ -2,7 +2,7 @@ import FadeIn from "./FadeIn";
 
 type SectionHeaderProps = {
   eyebrow?: string;
-  title: string;
+  title: React.ReactNode;
   subtitle?: string;
   centered?: boolean;
   className?: string;

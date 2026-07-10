@@ -70,7 +70,7 @@ export default function Hero() {
             <div className="mt-6 space-y-4 text-base leading-relaxed text-slate-600 sm:text-lg">
               <p>
                 Most restaurant owners believe their operations are running well—until an
-                inspection or customer complaint reveals hidden gaps.
+                inspection or customer complaint reveals operational gaps.
               </p>
               <p>
                 We help restaurants identify risks, improve food safety, implement practical SOPs,
