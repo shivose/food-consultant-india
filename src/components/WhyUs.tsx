@@ -15,7 +15,7 @@ export default function WhyUs() {
   return (
     <section id="why-us" className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeader title="More Than a Consultant. Your Restaurant Operations Partner." />
+        <SectionHeader title="More Than a Consultant. Your Long Term Restaurant Operations Partner." />
 
         <FadeIn delay={0.1}>
           <ul className="mx-auto grid max-w-3xl gap-3 sm:grid-cols-2">
