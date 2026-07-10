@@ -19,6 +19,7 @@ const consequences = [
   "Food Safety Risks",
   "Inspection Observations",
   "Damage to Your Reputation",
+  "Revenue Loss",
 ];
 
 export default function Problems() {
