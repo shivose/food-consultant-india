@@ -8,6 +8,7 @@ const quickLinks = [
   { label: "Solutions", href: "#solutions" },
   { label: "Process", href: "#process" },
   { label: "Why Us", href: "#why-us" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 const socialLinks = [

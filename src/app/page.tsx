@@ -5,6 +5,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Process from "@/components/Process";
 import WhyUs from "@/components/WhyUs";
 import CTA from "@/components/CTA";
+import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
@@ -33,6 +34,8 @@ export default function Home() {
         <WhyUs />
         <SectionDivider />
         <CTA />
+        <SectionDivider />
+        <FAQ />
         <SectionDivider />
         <Contact />
       </main>
