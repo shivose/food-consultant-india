@@ -23,7 +23,7 @@ export default function CTA() {
               </p>
               <div className="mt-10">
                 <Button href="#contact" variant="primary" size="lg" className="!bg-accent">
-                  Book Your Restaurant Assessment
+                  Book a free restaurant audit
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </div>

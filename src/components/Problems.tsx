@@ -93,7 +93,7 @@ export default function Problems() {
         </FadeIn>
       </div>
 
-      <SectionCTA label="Schedule Your Restaurant Assessment" />
+      <SectionCTA label="Book a free restaurant audit" />
     </section>
   );
 }

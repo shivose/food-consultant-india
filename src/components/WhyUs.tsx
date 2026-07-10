@@ -41,7 +41,7 @@ export default function WhyUs() {
         </FadeIn>
       </div>
 
-      <SectionCTA label="Book Your Restaurant Assessment" />
+      <SectionCTA label="Book a free restaurant audit" />
     </section>
   );
 }

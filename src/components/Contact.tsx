@@ -111,7 +111,7 @@ export default function Contact() {
           <FadeIn>
 
             <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
-              Book Your Restaurant Assessment
+              Book a free restaurant audit
             </h2>
             <p className="mt-5 text-base leading-relaxed text-slate-600 md:text-lg">
               Tell us about your restaurant and we&apos;ll identify operational gaps, food safety
@@ -412,7 +412,7 @@ export default function Contact() {
 
                   <div className="mt-6 flex justify-center">
                     <Button type="submit" size="lg" disabled={loading}>
-                      {loading ? "Sending..." : "Book Your Restaurant Assessment"}
+                      {loading ? "Sending..." : "Book a free restaurant audit"}
                     </Button>
                   </div>
 

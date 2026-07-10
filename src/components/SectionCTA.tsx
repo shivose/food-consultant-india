@@ -6,7 +6,7 @@ type SectionCTAProps = {
   label?: string;
 };
 
-export default function SectionCTA({ label = "Schedule Your Restaurant Assessment" }: SectionCTAProps) {
+export default function SectionCTA({ label = "Book a free restaurant audit" }: SectionCTAProps) {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <FadeIn className="mt-12 flex justify-center md:mt-16">
