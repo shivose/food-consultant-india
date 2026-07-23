@@ -1,7 +1,7 @@
 export const GTM_EVENTS = {
   LEAD_FORM_SUBMIT: "CE - Lead Form Submit",
-  PHONE_CLICK: "phone_click",
-  WHATSAPP_CLICK: "whatsapp_click",
+  PHONE_CLICK: "CE - Phone Click",
+  WHATSAPP_CLICK: "CE - WhatsApp Click",
 } as const;
 
 type DataLayerEvent = (typeof GTM_EVENTS)[keyof typeof GTM_EVENTS];
