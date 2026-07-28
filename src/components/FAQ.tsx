@@ -91,7 +91,7 @@ export default function FAQ() {
         </FadeIn>
       </div>
 
-      <SectionCTA label="Book a free restaurant audit" />
+      <SectionCTA label="Book a restaurant audit" />
     </section>
   );
 }

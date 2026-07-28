@@ -79,7 +79,7 @@ export default function Process() {
         </div>
       </div>
 
-      <SectionCTA label="Book a free restaurant audit" />
+      <SectionCTA label="Book a restaurant audit" />
     </section>
   );
 }
